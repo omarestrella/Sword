@@ -9,11 +9,7 @@
 import Foundation
 import Dispatch
 
-#if !os(Linux)
 import Starscream
-#else
-import WebSockets
-#endif
 
 /// WS class
 class Shard: Gateway {
@@ -248,15 +244,9 @@ class Shard: Gateway {
 
   /// Used to reconnect to gateway
   func reconnect() {
-    #if !os(Linux)
-    if let isOn = self.session?.isConnected, isOn {
+    if self.isConnected {
       self.session?.disconnect()
     }
-    #else
-    if let isOn = self.session?.state, isOn == .open {
-        try? self.session?.close()
-    }
-    #endif
     
     self.isConnected = false
     self.acksMissed = 0
@@ -288,11 +278,7 @@ class Shard: Gateway {
   */
   func send(_ text: String, presence: Bool = false) {
     let item = DispatchWorkItem { [unowned self] in
-      #if !os(Linux)
       self.session?.write(string: text)
-      #else
-      try? self.session?.send(text)
-      #endif
     }
 
     presence ? self.presenceBucket.queue(item) : self.globalBucket.queue(item)
@@ -300,11 +286,7 @@ class Shard: Gateway {
 
   /// Used to stop WS connection
   func stop() {
-    #if !os(Linux)
     self.session?.disconnect()
-    #else
-    try? self.session?.close()
-    #endif
     
     self.isConnected = false
     self.isReconnecting = false

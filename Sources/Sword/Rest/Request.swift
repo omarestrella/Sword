@@ -126,11 +126,7 @@ extension Sword {
       let headers = response.allHeaderFields
 
       if error != nil {
-        #if !os(Linux)
         completion(nil, RequestError(error! as NSError))
-        #else
-        completion(nil, RequestError(error as! NSError))
-        #endif
         sema.signal()
         return
       }

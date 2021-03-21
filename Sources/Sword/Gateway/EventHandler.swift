@@ -350,13 +350,7 @@ extension Shard {
 
     /// TYPING_START
     case .typingStart:
-      #if !os(Linux)
       let timestamp = Date(timeIntervalSince1970: data["timestamp"] as! Double)
-      #else
-      let timestamp = Date(
-        timeIntervalSince1970: Double(data["timestamp"] as! Int)
-      )
-      #endif
       let channelId = Snowflake(data["channel_id"])!
       guard let channel = self.sword.getChannel(for: channelId) else {
         return
