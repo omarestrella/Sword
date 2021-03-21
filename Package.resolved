@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "FoundationWithNetworking",
-        "repositoryURL": "https://github.com/rinsuki/FoundationWithNetworking",
-        "state": {
-          "branch": null,
-          "revision": "67e4425413483bde37a7b1f1258d831f24e6ea4d",
-          "version": "0.1.0"
-        }
-      },
-      {
         "package": "SHA1",
         "repositoryURL": "https://github.com/rinsuki/sha1-swift",
         "state": {
@@ -21,10 +12,10 @@
       },
       {
         "package": "Starscream",
-        "repositoryURL": "https://github.com/rinsuki/Starscream",
+        "repositoryURL": "https://github.com/omarestrella/Starscream.git",
         "state": {
-          "branch": "support-linux-and-windows",
-          "revision": "0db9fe26e1294d513c9f61a0b446fca0e40e1a7f",
+          "branch": "support-linux",
+          "revision": "deba2c3bc62d717e7c6e57e95ad588a17b554dac",
           "version": null
         }
       }

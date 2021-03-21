@@ -8,7 +8,7 @@ let package = Package(
     .library(name: "Sword", targets: ["Sword"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/rinsuki/Starscream", .branch("support-linux-and-windows")),
+    .package(url: "https://github.com/omarestrella/Starscream.git", .branch("support-linux")),
   ],
   targets: [
     .target(
