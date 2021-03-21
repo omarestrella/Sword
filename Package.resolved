@@ -2,11 +2,29 @@
   "object": {
     "pins": [
       {
-        "package": "Starscream",
-        "repositoryURL": "https://github.com/tesseract-one/Starscream.git",
+        "package": "FoundationWithNetworking",
+        "repositoryURL": "https://github.com/rinsuki/FoundationWithNetworking",
         "state": {
-          "branch": "master",
-          "revision": "44e25dd0af700a4da61d293eca8a4e1b90da97fc",
+          "branch": null,
+          "revision": "67e4425413483bde37a7b1f1258d831f24e6ea4d",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "SHA1",
+        "repositoryURL": "https://github.com/rinsuki/sha1-swift",
+        "state": {
+          "branch": "support-swiftpm",
+          "revision": "d48584b7fe9133f783fbf781199a67f9eadb8f92",
+          "version": null
+        }
+      },
+      {
+        "package": "Starscream",
+        "repositoryURL": "https://github.com/rinsuki/Starscream",
+        "state": {
+          "branch": "support-linux-and-windows",
+          "revision": "0db9fe26e1294d513c9f61a0b446fca0e40e1a7f",
           "version": null
         }
       }

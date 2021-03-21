@@ -8,10 +8,7 @@ let package = Package(
     .library(name: "Sword", targets: ["Sword"]),
   ],
   dependencies: [
-    .package(
-      url: "https://github.com/tesseract-one/Starscream.git",
-      .branch("master")
-    ),
+    .package(url: "https://github.com/rinsuki/Starscream", .branch("support-linux-and-windows")),
   ],
   targets: [
     .target(
