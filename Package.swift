@@ -5,18 +5,18 @@ import PackageDescription
 let package = Package(
   name: "Sword",
   products: [
-    .library(name: "Sword", targets: ["Sword"])
+    .library(name: "Sword", targets: ["Sword"]),
   ],
   dependencies: [
     .package(
-      url: "https://github.com/daltoniam/Starscream.git",
-      .upToNextMajor(from: "4.0.0")
-    )
+      url: "https://github.com/tesseract-one/Starscream.git",
+      .branch("master")
+    ),
   ],
   targets: [
     .target(
       name: "Sword",
       dependencies: ["Starscream"]
-    )
+    ),
   ]
 )
